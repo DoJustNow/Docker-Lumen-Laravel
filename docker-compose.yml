@@ -10,7 +10,7 @@ services:
 
     container_name: nginx
     volumes:
-    - ./src:/var/www/
+    - ./www:/var/www/
     - ./nginx/conf/default.conf:/etc/nginx/conf.d/default.conf
     ports:
     - 80:80
@@ -27,7 +27,7 @@ services:
       dockerfile: php/Dockerfile
     container_name: php
     volumes:
-    - ./src:/var/www
+    - ./www:/var/www
     - ./php/conf/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
     ports:
     -  9000:9000
