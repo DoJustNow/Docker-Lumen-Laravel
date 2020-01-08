@@ -12,7 +12,7 @@ RUN apt-get update \
 && apt-get install git -y
 
 COPY ./php/script/ /var/script/
-# экстендит базовый CMD (php-fpm) образа
+# установка user.name + user.email. Экстендит базовый CMD (php-fpm) образа
 CMD python3 /var/script/setgitoptions.py && php-fpm
 
 WORKDIR /var/www
