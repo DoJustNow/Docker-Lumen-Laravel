@@ -31,6 +31,8 @@ services:
     - ./php/conf/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
     ports:
     -  9000:9000
+    env_file:
+      - ./php/env/git.env
     environment:
       # Отладка CLI для любого сервер нейма
       PHP_IDE_CONFIG: "serverName=_"
