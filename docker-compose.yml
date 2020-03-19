@@ -34,6 +34,8 @@ services:
     environment:
       # Отладка CLI для любого сервер нейма
       PHP_IDE_CONFIG: "serverName=_"
+    expose:
+      - 9000
     user: 1000:1000
     networks:
       - docker-network
