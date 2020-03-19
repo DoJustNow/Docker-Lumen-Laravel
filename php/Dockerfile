@@ -13,6 +13,6 @@ RUN apt-get update \
 
 COPY ./php/script/ /var/script/
 # установка user.name + user.email. Экстендит базовый CMD (php-fpm) образа
-CMD python3 /var/script/setgitoptions.py && php-fpm
+CMD sudo python3 /var/script/setgitoptions.py && php-fpm
 
 WORKDIR /var/www
